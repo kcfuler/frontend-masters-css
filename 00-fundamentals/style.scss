@@ -37,7 +37,8 @@ body {
   border: 2px solid var(--color);
   border-radius: 0.25rem;
   outline: none;
-  transition: inherit;
+  transition-property: border-color;
+  transition-duration: 0.3s;
 }
 
 .ui-button {
@@ -47,9 +48,17 @@ body {
   color: white;
   font-weight: bold;
   border-radius: 0.25rem;
+  // 通过继承变量的改变来改变我们的样式
   height: var(--input-height);
   background-color: var(--color);
-  transition: inherit;
+
+  transition-property: background-color, opacity, transform;
+  transition-duration: 0.3s;
+
+  &:hover{
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
 }
 
 [data-show]:not([data-active]) {

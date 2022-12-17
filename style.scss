@@ -1,9 +1,15 @@
 @import './styles/base.scss';
 
+:root{
+  --primary-color : rgb(239, 218, 218);
+  --fg-color: black;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   padding: 5vmin;
-  background-color: #f4f4f4;
+  background-color: var(--primary-color);
+  color: var(--fg-color);
 }
 
 a {
@@ -28,4 +34,15 @@ ul {
   width: 5vmin;
   border-radius: 50%;
   background: radial-gradient(circle at bottom right, #fb2324, #fe932a);
+  animation: slide-right 1s linear infinite;
+}
+
+@keyframes slide-right {
+  from{
+    transform: translateX(0);
+  }
+  
+  to{
+    transform : translate(50vw);
+  }
 }
